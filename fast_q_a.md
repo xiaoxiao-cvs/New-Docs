@@ -25,7 +25,7 @@
 <br>
   
 
-<img src="/public/images/API_KEY.png" width=650>
+<img src="/images/API_KEY.png" width=650>
   
 
 ---
@@ -91,7 +91,7 @@
 >
 ><br>
 >
-><img src="/public/images/MONGO_DB_0.png" width=250>
+><img src="/images/MONGO_DB_0.png" width=250>
 >
 ><br>
 >
@@ -99,7 +99,7 @@
 >
 ><br>
 >
-><img src="/public/images/MONGO_DB_1.png" width=250>
+><img src="/images/MONGO_DB_1.png" width=250>
 >
 ><br>
 >
@@ -107,7 +107,7 @@
 >
 ><br>
 >
-><img src="/public/images/MONGO_DB_2.png" width=450>
+><img src="/images/MONGO_DB_2.png" width=450>
 >
 ><br>
 >
