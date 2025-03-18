@@ -1,4 +1,4 @@
-# 🐳 Docker 部署指南
+# 🐊 Docker 部署指南
 
 ## 部署步骤 (推荐，但不一定是最新)
 
@@ -6,7 +6,7 @@
 
 ### 0. 前提说明
 
-**本文假设读者已具备一定的 Docker 基础知识。若您对 Docker 不熟悉，建议先参考相关教程或文档进行学习，或选择使用 [📦Linux手动部署指南](./manual_deploy_linux.md) 或 [📦Windows手动部署指南](./manual_deploy_windows.md) 。**
+**本文假设读者已具备一定的 Docker 基础知识。若您对 Docker 不熟悉，建议先参考相关教程或文档进行学习，或选择使用 [📬Linux手动部署指南](./manual_deploy_linux.md) 或 [📬Windows手动部署指南](./manual_deploy_windows.md) 。**
 
 
 ### 1. 获取Docker配置文件
@@ -41,7 +41,7 @@ NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker-compose up -d
 
 ### 3. 修改配置并重启Docker
 
-- 请前往 [🎀 新手配置指南](docs/installation_cute.md) 或 [⚙️ 标准配置指南](docs/installation_standard.md) 完成`.env.prod`与`bot_config.toml`配置文件的编写\
+- 请前往 [🎀 新手配置指南](/manual/installation/installation_cute) 或 [⚙️ 标准配置指南](/manual/installation/installation_standard) 完成`.env.prod`与`bot_config.toml`配置文件的编写\
 **需要注意`.env.prod`中HOST处IP的填写，Docker中部署和系统中直接安装的配置会有所不同**
 
 - 重启Docker容器:
@@ -89,5 +89,5 @@ NAPCAT_UID=$(id -u) NAPCAT_GID=$(id -g) docker-compose up -d
 ## ⚠️ 注意事项
 
 - 目前部署方案仍在测试中，可能存在未知问题
-- 配置文件中的API密钥请妥善保管，不要泄露
+- 配置文件中的API密钥请妙善保管，不要泄露
 - 建议先在测试环境中运行，确认无误后再部署到生产环境

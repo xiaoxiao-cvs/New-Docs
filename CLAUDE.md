@@ -3,89 +3,94 @@
 ## Project Architecture Overview
 ```mermaid
 graph TD
-    A[Root] --> B[.vitepress]
-    A --> C[Source]
-    A --> D[Documentation Files]
-    B --> E[config.mts]
-    B --> F[Theme]
-    F --> G[index.ts]
-    F --> H[style.css]
-    C --> I[ai-instruction.md]
-    C --> J[api/]
-    J --> K[draft.rst]
-    D --> L[index.md]
-    D --> M[api-examples.md]
-    D --> N[markdown-examples.md]
+    A[Root] --> B[Manual]
+    A --> C[Develop]
+    A --> D[Public Resources]
+    B --> E[Installation]
+    B --> F[Deployment]
+    B --> G[Usage]
+    C --> H[API]
+    C --> I[Guide]
+    C --> J[Structure]
+    D --> K[Public/Images]
+    D --> L[Public/Avatars]
 
-    %% Key dependencies
-    E -.-> G
-    G -.-> H
+    %% Key components
+    E --> E1[installation_standard.md]
+    E --> E2[installation_cute.md]
+    F --> F1[docker_deploy.md]
+    F --> F2[manual_deploy_linux.md]
+    F --> F3[manual_deploy_windows.md]
+    F --> F4[synology_deploy.md]
+    G --> G1[fast_q_a.md]
+    H --> H1[index.md]
+    H --> H2[draft.md]
+    I --> I1[ai-instruction.md]
+    J --> J1[file_structure.md]
 ```
 
-## File Dependencies
-| File | Dependencies | Purpose |
-|------|--------------|---------|
-| .vitepress/config.mts | vitepress | Main configuration file defining site structure and navigation |
-| .vitepress/theme/index.ts | vue, vitepress/theme | Custom theme extension using Vue |
-| .vitepress/theme/style.css | None | CSS customization for the VitePress theme |
-| index.md | None | Home page with frontmatter configuration |
-| api-examples.md | vitepress (useData) | Examples of VitePress runtime APIs |
-| markdown-examples.md | None | Examples of VitePress markdown extensions |
-| source/ai-instruction.md | None | Guidelines for AI-assisted development |
-| source/api/draft.rst | None | Draft API documentation in RST format |
+## File Organization
+| Section | Path | Purpose |
+|---------|------|---------|
+| Root | /index.md | Main landing page with navigation and feature overview |
+| Manual | /manual/ | User-facing documentation for installation and usage |
+| Develop | /develop/ | Developer-facing documentation for API and structure |
+| Installation | /manual/installation/ | Guides for installing and configuring MaiMBot |
+| Deployment | /manual/deployment/ | Various deployment methods (Docker, Linux, Windows, NAS) |
+| Usage | /manual/usage/ | Guides for using and troubleshooting MaiMBot |
+| API | /develop/api/ | API documentation and references |
+| Guide | /develop/guide/ | Development guidelines and workflows |
+| Structure | /develop/structure/ | Project structure explanations |
 
-## Module Call Flow
-```mermaid
-sequenceDiagram
-    participant User
-    participant VitePress
-    participant Config
-    participant Theme
-    participant Markdown
-    
-    User->>VitePress: Access site
-    VitePress->>Config: Load configuration
-    Config->>VitePress: Return site structure
-    VitePress->>Theme: Apply theme
-    Theme->>VitePress: Render UI components
-    VitePress->>Markdown: Process .md files
-    Markdown->>VitePress: Return HTML content
-    VitePress->>User: Render complete page
-```
+## Key Files and Their Purposes
+| File | Purpose |
+|------|---------|
+| /index.md | Main landing page with hero section and navigation |
+| /manual/index.md | User manual landing page |
+| /develop/index.md | Developer documentation landing page |
+| /manual/installation/installation_standard.md | Standard installation guide |
+| /manual/installation/installation_cute.md | Beginner-friendly installation guide |
+| /manual/deployment/docker_deploy.md | Docker deployment instructions |
+| /manual/deployment/manual_deploy_linux.md | Linux manual deployment guide |
+| /manual/deployment/manual_deploy_windows.md | Windows manual deployment guide |
+| /manual/deployment/synology_deploy.md | Synology NAS deployment guide |
+| /manual/usage/fast_q_a.md | FAQ and troubleshooting guide |
+| /develop/api/index.md | API overview and documentation |
+| /develop/structure/file_structure.md | Detailed project structure explanation |
+| /develop/guide/ai-instruction.md | AI-assisted development guide |
 
-## Key File Index
-| Path | Description | Primary Functions |
-|------|-------------|-------------------|
-| .vitepress/config.mts | Site configuration | Defines navigation, sidebar, and site metadata |
-| .vitepress/theme/index.ts | Theme customization | Extends default theme, provides layout customization |
-| .vitepress/theme/style.css | Visual styling | Customizes colors, components, and responsive design |
-| index.md | Home page | Landing page with hero section and feature listing |
-| api-examples.md | API documentation | Examples of VitePress runtime API usage |
-| markdown-examples.md | Markdown guide | Shows VitePress markdown extensions |
-| source/ai-instruction.md | AI development guide | Complete workflow for AI-assisted development |
-| source/api/draft.rst | API draft | GraphQL API design for a project called "MaiMBot" |
+## Navigation Structure
+- Home (/)
+  - Manual (/manual/)
+    - Installation (/manual/installation/)
+    - Deployment (/manual/deployment/)
+    - Usage (/manual/usage/)
+  - Develop (/develop/)
+    - API (/develop/api/)
+    - Structure (/develop/structure/)
+    - Guide (/develop/guide/)
 
-## Command Reference
+## Static Assets
+- /public/avatars/ - Avatar images including MaiM.png (favicon)
+- /public/images/ - Documentation images and screenshots
+
+## Build Commands
 ```
 pnpm docs:dev    # Start development server
 pnpm docs:build  # Build production site
 pnpm docs:preview # Preview production build
 ```
 
-## Navigation Structure
-- Home (/)
-- Examples (/markdown-examples)
-  - Markdown Examples (/markdown-examples)
-  - Runtime API Examples (/api-examples)
-
 ## Content Types
-1. **Documentation Pages**: Standard markdown files with optional frontmatter
-2. **API Documentation**: Technical references with code examples
-3. **Custom Components**: Vue components that can be used in markdown
+1. **User Documentation**: Installation guides, deployment instructions, usage examples
+2. **Developer Documentation**: API references, project structure, development workflows
+3. **Interactive Elements**: Hero sections with CSS styling, feature grids
+4. **Visual Assets**: Screenshots, diagrams, logos
 
 ## Project Context
-This is a VitePress documentation site for a project called "MaiMBot", containing:
-- Standard documentation pages
-- API references and examples
-- Custom theme configuration
-- Guidelines for AI-assisted development
+This is a VitePress documentation site for a project called "MaiMBot", which is an intelligent chatbot for QQ groups. The documentation is organized into two main sections:
+
+1. Manual (user-facing) - Contains installation guides, deployment methods, and usage instructions
+2. Develop (developer-facing) - Contains API documentation, project structure explanations, and development guides
+
+The site aims to provide comprehensive documentation for both regular users and developers who want to extend or modify MaiMBot.
