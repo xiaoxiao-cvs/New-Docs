@@ -5,7 +5,7 @@ export default defineConfig({
   title: "MaiMBot 文档中心",
   description: "MaiMBot 开发与使用的全方位指南",
   head: [
-    ['link', { rel: 'icon', href: '/public/avatars/MaiM.png' }]
+    ['link', { rel: 'icon', href: '/avatars/MaiM.png' }]
   ],
   themeConfig: {
     search: {

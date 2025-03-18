@@ -52,4 +52,4 @@ MaiMBot是一个功能强大的QQ群聊机器人，基于大语言模型提供�
 </div>
 
 
-![MaiMBot](/public/avatars/MaiM.png)
+![MaiMBot](/avatars/MaiM.png)
