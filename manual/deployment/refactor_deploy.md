@@ -113,7 +113,7 @@ cd nonebot-maibot-adapter
 ENVIRONMENT=dev
 DRIVER=~fastapi+~websockets
 PORT=18002
-ONEBOT_WS_URLS=["ws://127.0.0.1:8085"] #此处与Napcat端口相同
+ONEBOT_WS_URLS=["ws://127.0.0.1:8095"] #此处与Napcat端口相同
 ```
 > <details>
 > <summary>如果你想修改这里的 PORT=18002 配置，看这里</summary>
