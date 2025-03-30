@@ -42,7 +42,7 @@ git clone https://github.com/MaiM-with-u/maim_message.git
 git clone https://github.com/Maple127667/nonebot-plugin-maibot-adapters.git
 ```
 
-### 二、依赖安装
+### 三、依赖安装
 
 1. 进入下载的麦麦repo文件夹，切换分支到refactor
 2. pip安装所需依赖
@@ -59,7 +59,7 @@ cd maim_message
 pip install -e .
 ```
 
-### 三、Nonebot adapter 部署
+### 四、Nonebot adapter 部署
 
 - 如果你按照上面的进行且没有关闭窗口，那么你应该在python环境/conda环境中，如果没有，请手动进入
 
@@ -84,11 +84,11 @@ cd nonebot-maibot-adapter
 
 到这里，nonebot adapter部署完成
 
-### 四、Napcat 部署
+### 五、Napcat 部署
 
 略
 
-### 五、配置 MaiBot 和 Nonebot adapter
+### 六、配置 MaiBot 和 Nonebot adapter
 
 #### MaiBot配置
 1. 首先手动复制`template`文件夹中的`bot_config_template.toml`到`config`目录下并改名为`bot_config.toml`
@@ -138,7 +138,7 @@ PORT=8096 # 此处与Napcat端口相同
 ```
 > 如果你想修改这里的 PORT=18002 配置，看上面的折叠部分
 
-### 六、运行
+### 七、运行
 **如果你是正向连接的方式，那么先启动Napcat**，然后进入`nonebot-maibot-adapter`文件夹，在你的虚拟环境中运行
 ```shell
 nb run --reload
