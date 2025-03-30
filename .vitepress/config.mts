@@ -45,7 +45,8 @@ export default defineConfig({
             { text: 'Linux手动部署', link: '/manual/deployment/manual_deploy_linux' },
             { text: 'Windows手动部署', link: '/manual/deployment/manual_deploy_windows' },
             { text: '群晖NAS部署', link: '/manual/deployment/synology_deploy' },
-            { text: '新手Linux部署', link: '/manual/deployment/linux_deploy_guide_for_beginners' }
+            { text: '新手Linux部署', link: '/manual/deployment/linux_deploy_guide_for_beginners' },
+            { text: 'refactor（MaimCore版）部署', link: '/manual/deployment/refactor_deploy'}
           ]
         },
         {

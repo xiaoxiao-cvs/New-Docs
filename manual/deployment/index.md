@@ -26,6 +26,12 @@
 
 **适合人群**：没有太多技术背景但想尝试部署的用户，或使用特定设备的用户。
 
+### 新版MaimCore部署
+
+这个部署文档针对新的refactor分支进行部署
+
+- [refactor（MaimCore版）部署](/manual/deployment/refactor_deploy)
+
 ## 部署前准备
 
 无论使用哪种部署方式，您都需要准备以下内容：
