@@ -1,9 +1,9 @@
 # Windows 找不到 `mongodb\bin\mongod.exe` 解决方案
-# 此文档有误，暂时请勿参考，正在fix
+# 此文档正在fix，暂时请勿参考
 
 ## 目录
 - [Windows 找不到 `mongodb\bin\mongod.exe` 解决方案](#windows-找不到-mongodbbinmongodexe-解决方案)
-- [此文档有误，暂时请勿参考，正在fix](#此文档有误暂时请勿参考正在fix)
+- [此文档正在fix，暂时请勿参考](#此文档正在fix暂时请勿参考)
   - [目录](#目录)
   - [问题原因](#问题原因)
   - [安装步骤](#安装步骤)
